@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whitewater Rafting Vacation | Waite Water Rafting | Home</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div id="content">
+        <header>
+            <a href="index.html" id="logo_link">
+                <img class="logo" src="images/logo.png" alt="High Desert Munitions Logo">
+            </a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="faq.html">FAQ</a>
+            </nav>
+        </header>
+        
+        <main class="faq-main">
+            <!-- <div class="faq-content">
+                For future reference 
+                    https://www.w3schools.com/howto/howto_js_collapsible.asp
+                <button class="collapsible" type="button">What is your pricing?</button> 
+                <div class="button-answer">
+                    <p>We try to keep our pricing as fair as possible. For the ammo itself, we charge for the exact price of the components + 15% labor charge. This number does not include the price of shipping.</p>
+                </div>
+                <button class="collapsible" type="button">What calibers do you load for?</button> 
+                <div class="button-answer">
+                    <p>We will load any caliber if a reloading die and loading data exists for it (For potential safety concerns, this excludes blackpowder loads) .</p>
+                </div>
+                <button class="collapsible" type="button">Do you load any ammo for shotguns?</button> 
+                <div class="button-answer">
+                    <p>We are in the process of aquiring the neccessary tools to do so. We plan to offer shotgun loads in the not too distant future.</p>
+                </div>
+                <button class="collapsible" type="button">Why can't I buy 22 lr?</button> 
+                <div class="button-answer">
+                    <p>22 lr is a rimfire cartridge. Very specialized and expensive tools are required to load rimfire cartridges. We currently do not posess the ability to manufacture any rimfire cartridges.</p>
+                </div>
+            </div> -->
+
+            <button class="accordion">What is your pricing?</button>
+            <div class="panel">
+                <p>We try to keep our pricing as fair as possible. For the ammo itself, we charge for the exact price of the components + 15% labor charge. This number does not include the price of shipping.</p>
+            </div>
+
+            <button class="accordion">What calibers do you load for?</button>
+            <div class="panel">
+                <p>We will load any caliber if a reloading die and loading data exists for it (For potential safety concerns, this excludes blackpowder loads).</p>
+            </div>
+
+            <button class="accordion">Do you load any ammo for shotguns?</button>
+            <div class="panel">
+                <p>We are in the process of aquiring the neccessary tools to do so. We plan to offer shotgun loads in the not too distant future.</p>
+            </div>
+
+            <button class="accordion">Why can't I buy 22 lr?</button>
+            <div class="panel">
+                <p>22 lr is a rimfire cartridge. Very specialized and expensive tools are required to load rimfire cartridges. We currently do not posess the ability to manufacture any rimfire cartridges.</p>
+            </div>
+
+            <div id="feedback">
+                <p>Still have some questions?</p>
+            </div>
+            <form action="/my-handling-form-page" method="post">
+                <ul>
+                    <li class="name-input">
+                      <label for="name">Name:</label>
+                      <input type="text" id="name" name="user_name">
+                    </li>
+                    <li class="email-input">
+                      <label for="mail">Email:</label>
+                      <input type="email" id="mail" name="user_email">
+                    </li>
+                    <li class="question-input">
+                      <label for="msg">Question:</label>
+                      <textarea id="msg" name="user_question"></textarea>
+                    </li>
+                    <li class="contact-button">
+                        <button type="submit">Send</button>
+                    </li>
+                </ul>
+            </form>
+        </main>
+        <footer>
+            <p>High Desert Munitions &copy; 2023 - Hunter Waite</p>
+            <p><a href="siteplan/site-plan.html">Site Plan</a></p>
+            <p><a href="faq.html">Contact Us</a></p>
+            <div class="social">
+                <a href="https://facebook.com" target="_blank">
+                    <img src="images/facebook.png" alt="fb icon">
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="images/twitter.png" alt="twitter icon">
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="images/instagram.png" alt="instagram icon">
+                </a>
+            </div> 
+        </footer>
+    </div>
+
+    <script>
+        // This script I ripped from the form assignment vvv
+
+        // get the feedback div element so we can do something with it.
+        const feedbackElement = document.getElementById('feedback');
+        // get the form so we can read what was entered in it.
+        const formElement = document.forms[0];
+        // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+        formElement.addEventListener('submit', function(e) {
+            // stop the form from doing the default action.
+            e.preventDefault();
+            // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+            feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thank you for your message. We will get back with you as soon as possible!';
+            // make the feedback element visible.
+            feedbackElement.style.display = "block";
+            // add a class to move everything down so our message doesn't cover it.
+            document.body.classList.toggle('moveDown');
+        });
+    </script>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                } 
+            });
+        }
+    </script>
+</body>
+</html>

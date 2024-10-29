@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High Desert Munitions | Hunter Waite Fall 2024 Final</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="form.js" defer></script>
+</head>
+<body>
+    <div id="content">
+        <header>
+            <a href="index.html" id="logo_link">
+                <img class="logo" src="images/logo.png" alt="High Desert Munitions Logo">
+            </a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="faq.html">FAQ</a>
+            </nav>
+        </header>
+        
+        <section id="intro-msg">
+            <h3>We at High Desert Munitions are committed to provide the best ammunition for a variety of situations. Below are a few of the most popular options we provide. As we grow, we look to improve our customer's ordering experience. We are in the process of building out our online systems, however at this time, all orders are taken over the phone. Our precision experts can assist in selecting from our vast selection of components to get the most for your situation.</h3>
+        </section>
+
+        <main class="services-content">
+            <div class="services-img">
+                <div class="precision-option">
+                    <img src="images/hunter-with-gun.jpg" alt="Hunter on the side of a snowy mountain carrying his rifle.">
+                    <p class="large">Precision Package:</p>
+                    <p class="small">To unlock the potential.</p>
+                </div>
+                <div class="precision-info">
+                    <p>Every rifle is unique. One load that shoots well in one rifle may not shoot well in another. We want to help unlock the potential your rife holds. The Precision Package will contain a wide variety of load variation to help narrow down what is most accurate in your particular rifle.</p><p>Typically we focus on your choice of variation in powder charge, bullet seating depth, bullet weight, and/or powder type. We will provide 4 identical loads with 5 incrementing variations to easily narrow down the load your rifle likes.</p>
+                    
+                </div>
+                <button type="button" class="orderButtonPrecision">Place Order</button> 
+
+                <div class="bulk-option">
+                    <img src="images/competition-shooting.jpg" alt="Hunter on the side of a snowy mountain carrying his rifle.">
+                    <p class="large">Bulk Package:</p>
+                    <p class="small">To improve skills.</p>
+                </div>
+                <div class="bulk-info">
+                    <p>Whether you're a competitive shooter, or simply want to be prepared for the worst, we provide bulk purchases of ammunition. Bulk packages are offered up to 25,000 rounds in a single order.</p><p>More unique or obscure calibers may be denied due to component availability.</p>
+                    
+                </div>
+                <button type="button" class="orderButtonBulk">Place Order</button>
+
+                <div class="exotic-option">
+                    <img src="images/rifle-ammo.jpeg" alt="Hunter on the side of a snowy mountain carrying his rifle.">
+                    <p class="large">Exotic Package:</p>
+                    <p class="small">To be different.</p>
+                </div>
+                <div class="exotic-info">
+                    <p>Sometimes, you may want something more unique and specific. We offer a wide array of customization, from bullet type, to specific gunpowders, to rare cartridges. If we can get our hands on it, we'll load it.</p><p>Note: Safety is our number one priority. We hold the right to deny any load we deem unsafe.</p>
+                    
+                </div>
+                <button type="button" class="orderButtonExotic">Place Order</button>
+            </div>
+
+            <form id="formContainer" style="display:none;">
+                <div id="skillLevel">
+                    <label for="skill">Select your skill level:</label>
+                    <select id="skill" name="skill">
+                        <option value="beginner">Beginner</option>
+                        <option value="experienced">Experienced</option>
+                    </select>
+                </div>
+
+                <div id="precisionQuestions" style="display:none;">
+
+                    <label for="precisionCartridge">Cartridge </label>
+                    <input type="text" id="precisionCartridge" name="precisionCartridge" placeholder="ex. 308 Winchester">
+                    <label for="precisionQuantity">Quantity (20rd) </label>
+                    <input type="number" id="precisionQuantity" name="precisionQuantity" placeholder="Choose One">
+                    <label for="precisionVariation">Variation</label>
+                    <select id="precisionVariation" name="precisionVariation">
+                        <option value="placeholder">Choose One</option>
+                        <option value="chargeVar">Powder Charge</option>
+                        <option value="depthVar">Seating Depth</option>
+                        <option value="weightVar">Bullet Weight</option>
+                        <option value="powderVar">Powder Type</option>
+                    </select>
+                </div>
+                <div id="precisionAdditionalQuestions" style="display:none;">
+
+                    <label for="precisionBullet">Match Bullet</label>
+                    <select id="precisionBullet" name="precisionBullet">
+                        <option value="placeholder">Choose One</option>
+                        <option value="sierra">Sierra</option>
+                        <option value="hornady">Hornady</option>
+                        <option value="barnes">Barnes</option>
+                        <option value="seneca">Seneca</option>
+                        <option value="nosler">Nosler</option>
+                        <option value="norma">Norma</option>
+                    </select>
+                    <label for="precisionBrass">Brass Brand</label>
+                    <select id="precisionBrass" name="precisionBrass">
+                        <option value="placeholder">Choose One</option>
+                        <option value="starline">Starline</option>
+                        <option value="lapua">Lapua</option>
+                        <option value="hornady">Hornady</option>
+                        <option value="alpha">Alpha Munitions</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div id="bulkQuestions" style="display:none;">
+                    <label for="bulkCartridge">Cartridge</label>
+                    <input type="text" id="bulkCartridge" name="bulkCartridge" placeholder="ex. 308 Winchester">
+                    <label for="bulkBullet">Bullet Type</label>
+                    <select id="bulkBullet" name="bulkBullet">
+                        <option value="placeholder">Choose One</option>
+                        <option value="jhp">Jacketed Hollow Point</option>
+                        <option value="fmj">Full Metal Jacket</option>
+                        <option value="frangible">Frangible Training</option>
+                        <option value="subsonic">Subsonic</option>
+                        <option value="cowboy">Light Recoil/Cowboy Action</option>
+                    </select>
+                    <label for="bulkQuantity">Quantity</label>
+                    <select id="bulkQuantity" name="bulkQuantity">
+                        <option value="placeholder">Choose One</option>
+                        <option value="1000">1,000</option>
+                        <option value="2500">2,500</option>
+                        <option value="5000">5,000</option>
+                        <option value="10000">10,000</option>
+                        <option value="25000">25,000</option>
+                    </select>
+                </div>
+
+                <!-- <div id="bulkAdditionalQuestions" style="display:none;">
+                    <label for="bulkExperienced">Bulk Experienced Question:</label>
+                    <input type="text" id="bulkExperienced" name="bulkExperienced">
+                </div> -->
+
+                <div id="exoticQuestions" style="display:none;">
+                    <label for="exoticCartridge">Cartridge </label>
+                        <input type="text" id="exoticCartridge" name="exoticCartridge" placeholder="Choose One">
+                    <label for="exoticQuantity">Quantity (20rd) </label>
+                        <input type="text" id="exoticQuantity" name="exoticQuantity" placeholder="Choose One">
+                    <label for="exoticBullet">Bullet/Projectile </label>
+                        <input type="text" id="exoticBullet" name="exoticBullet" placeholder="Choose One">
+                </div>
+                <div id="exoticAdditionalQuestions" style="display:none;">
+                    <label for="exoticWeight">Bullet Weight (grains)</label>
+                    <input type="number" id="exoticWeight" name="exoticWeight" placeholder="Leave blank if not applicable">
+                    <label for="exoticProjectile">Projectile Design</label>
+                    <select id="exoticProjectile" name="exoticProjectile">
+                        <option value="placeholder">Choose One</option>
+                        <option value="boatTail">Boat Tail Hollow Point</option>
+                        <option value="match">Precision Match</option>
+                        <option value="mono">Copper Monolithic</option>
+                        <option value="tipped">Ballistic Tipped</option>
+                        <option value="copperTipped">Ballistic Tipped Copper</option>
+                        <option value="soft">Soft Point</option>
+                        <option value="frangible">Frangible</option>
+                        <option value="hard">Hard Cast</option>
+                        <option value="ap">Armor Piercing</option>
+                        <option value="tracer">Tracer</option>
+                        <option value="Incindiary">Incindiary</option>
+                        <option value="sabot">Sabot</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <label for="exoticPower">Power Load</label>
+                    <select id="exoticPower" name="exoticPower">
+                        <option value="average">Average Load</option>
+                        <option value="light">Light Load/Low Recoil</option>
+                        <option value="hot">Hot Load/+P</option>
+                        <option value="subsonic">Subsonic</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <label for="exoticDepth">Seating Depth</label>
+                    <input type="text" id="exoticDepth" name="exoticDepth" placeholder="Leave blank for default">
+                    <label for="exoticPowder">Gunpowder</label>
+                    <input type="text" id="exoticPowder" name="exoticPowder" placeholder="Leave blank for default">
+                </div>
+                <button type="submit">Submit</button>
+                <div id="thankYouMessage">
+                    Thank you for your submission!
+                </div>
+            </form>           
+        </main>
+        <footer>
+            <p>High Desert Munitions &copy; 2024 - Hunter Waite</p>
+            <p><a href="https://hunterw523.github.io/WDD-131/site-plan/site-plan.html">Site Plan</a></p>
+            <p><a href="faq.html">Contact Us</a></p>
+            <div class="social">
+                <a href="https://facebook.com" target="_blank">
+                    <img src="images/facebook.png" alt="fb icon">
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="images/twitter.png" alt="twitter icon">
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="images/instagram.png" alt="instagram icon">
+                </a>
+            </div> 
+        </footer>
+    </div>
+</body>
+</html>
